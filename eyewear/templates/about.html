@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="{% url 'index' %}" class="logo"> <img src="{% static 'images/eyewear.jpg' %}" class="img-thumbnail" alt="..."> </a>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'index' %}">home</a></li>
+            <li><a href="{% url 'products' %}">products</a></li>
+            <li><a href="#">pages +</a>
+                <ul>
+                    <li><a href="{% url 'about' %}">about</a></li>
+                    <li><a href="{% url 'blogs' %}">blogs</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'contact' %}">contact</a></li>
+            <li><a href="#">account +</a>
+                <ul>
+                    <li><a href="{% url 'login' %}">login</a></li>
+                    <li><a href="{% url 'register' %}">register</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="{% url 'cart' %}" class="fas fa-shopping-cart"></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- header section  -->
+
+<section class="heading">
+    <h1>about us</h1>
+    <p> <a href="{% url 'index' %}">home</a> >> about </p>
+</section>
+
+<!-- header section -->
+
+<!-- about section starts  -->
+
+<section class="about">
+
+    <h1 class="title">why choose us?</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="{% static 'images/about-img.jpg' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h3>The best eye glasses sellers</h3>
+            <p>Goggles are a type of protective eyewear that surrounds or protects the eye to keep particles, water, and chemicals out. They’re used in both chemical labs and the woodworking industry. They’re also popular in winter sports and swimming. When operating power tools such as drills or chainsaws, goggles are often used to protect the eyes from flying particles. For people with visual issues, prescription goggles come in a variety of designs. It’s chilly outside: To keep the inside of the goggles</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+        
+    </div>
+
+    <div class="icons-container">
+
+        <div class="icons">
+            <img src="{% static 'images/icon-1.png' %}" alt="">
+            <h3>all sizes</h3>
+        </div>
+
+        <div class="icons">
+            <img src="{% static 'images/icon-2.png' %}" alt="">
+            <h3>free delivery</h3>
+        </div>
+
+        <div class="icons">
+            <img src="{% static 'images/icon-3.png' %}" alt="">
+            <h3>easy returns</h3>
+        </div>
+
+        <div class="icons">
+            <img src="{% static 'images/icon-4.png' %}" alt="">
+            <h3>easy payments</h3>
+        </div>
+
+        <div class="icons">
+            <img src="{% static 'images/icon-5.png' %}" alt="">
+            <h3>24/7 support</h3>
+        </div>
+
+    </div>
+	
+	 </div>
+		<a href="https://api.whatsapp.com/send?phone=919518705143&text=Hi,I saw your website and following are my requirement" title="message us" target="_blank" style="bottom:10%; right:10px;
+			 position:fixed; z-index:940;">
+			 <img src="{% static 'images/whatsapp.png' %}" style="float:right;  width:40px; height:40px; margin-left:30px;">
+			 </a> 
+			 
+		<a href="tel:+9518705143"  title="Call me" target="_blank" style="bottom:1%; right:10px;
+			 position:fixed; z-index:940;">
+			<img src="{% static 'images/call_phone.png' %}" style="float:right;  width:35px; height:35px; margin-left:30px;">	 
+             </a> 
+	 </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="{% url 'index' %}"> <i class="fas fa-angle-right"></i> home</a>
+            <a href="{% url 'products' %}"> <i class="fas fa-angle-right"></i> products</a>
+            <a href="{% url 'about' %}"> <i class="fas fa-angle-right"></i> about</a>
+            <a href="{% url 'blogs' %}"> <i class="fas fa-angle-right"></i> blogs</a>
+            <a href="{% url 'contact' %}"> <i class="fas fa-angle-right"></i> contact</a>
+            <a href="{% url 'login' %}"> <i class="fas fa-angle-right"></i> login</a>
+            <a href="{% url 'register' %}"> <i class="fas fa-angle-right"></i> register</a>
+            <a href="{% url 'cart' %}"> <i class="fas fa-angle-right"></i> cart</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-angle-right"></i> my account </a>
+            <a href="#"> <i class="fas fa-angle-right"></i> my order </a>
+            <a href="#"> <i class="fas fa-angle-right"></i> my wishlist </a>
+            <a href="#"> <i class="fas fa-angle-right"></i> terms of use </a>
+            <a href="#"> <i class="fas fa-angle-right"></i> privacy policy </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-github"></i> github </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <form action="">
+                <input type="email" placeholder="enter your emal">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span>Mr. Pankaj Chaudhary</span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+</body>
+</html>

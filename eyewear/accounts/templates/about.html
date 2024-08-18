@@ -1,0 +1,53 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<section class="heading">
+    <h1>About Us</h1>
+    <p> <a href="{% url 'index' %}">Home</a> >> About </p>
+</section>
+
+<section class="about">
+    <h1 class="title">Why Choose Us?</h1>
+    <div class="row">
+        <div class="image">
+            <img src="{% static 'images/about-img.jpg' %}" alt="">
+        </div>
+        <div class="content">
+            <h3>The best eye glasses sellers</h3>
+            <p>Goggles are a type of protective eyewear that surrounds or protects the eye to keep particles, water, and chemicals out. They’re used in both chemical labs and the woodworking industry. They’re also popular in winter sports and swimming. When operating power tools such as drills or chainsaws, goggles are often used to protect the eyes from flying particles. For people with visual issues, prescription goggles come in a variety of designs. It’s chilly outside: To keep the inside of the goggles</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+    <div class="icons-container">
+        <div class="icons">
+            <img src="{% static 'images/icon-1.png' %}" alt="">
+            <h3>All Sizes</h3>
+        </div>
+        <div class="icons">
+            <img src="{% static 'images/icon-2.png' %}" alt="">
+            <h3>Free Delivery</h3>
+        </div>
+        <div class="icons">
+            <img src="{% static 'images/icon-3.png' %}" alt="">
+            <h3>Easy Returns</h3>
+        </div>
+        <div class="icons">
+            <img src="{% static 'images/icon-4.png' %}" alt="">
+            <h3>Easy Payments</h3>
+        </div>
+        <div class="icons">
+            <img src="{% static 'images/icon-5.png' %}" alt="">
+            <h3>24/7 Support</h3>
+        </div>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=919518705143&text=Hi,I saw your website and following are my requirement" title="message us" target="_blank" style="bottom:10%; right:10px; position:fixed; z-index:940;">
+        <img src="{% static 'images/whatsapp.png' %}" style="float:right; width:40px; height:40px; margin-left:30px;">
+    </a>
+    <a href="tel:+9518705143" title="Call me" target="_blank" style="bottom:1%; right:10px; position:fixed; z-index:940;">
+        <img src="{% static 'images/call_phone.png' %}" style="float:right; width:35px; height:35px; margin-left:30px;">
+    </a>
+</section>
+{% endblock %}

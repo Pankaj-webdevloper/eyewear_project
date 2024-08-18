@@ -13,6 +13,77 @@
   transition: all .2s linear;
 }
 
+/* my included css  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+.navbar ul li:hover ul {
+  display: block;
+}
+
+.navbar ul li a {
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-info a {
+  color: #333;
+  text-decoration: none;
+}
+
+.user-info .username {
+  color: #333;
+}
+
+
+
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;

@@ -1,0 +1,47 @@
+<!-- blogs.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blogs{% endblock %}
+
+{% block content %}
+<section class="heading">
+    <h1>Our Blogs</h1>
+    <p> <a href="{% url 'index' %}">Home</a> >> Blogs </p>
+</section>
+
+<section class="blogs">
+    <h1 class="title">Our Daily Posts</h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="{% static 'images/blog-1.jpg' %}" alt="">
+            </div>
+            <div class="content">
+                <h3>Blog Title</h3>
+                <p>Blog description goes here. This is a sample description for the blog post.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="{% static 'images/blog-2.jpg' %}" alt="">
+            </div>
+            <div class="content">
+                <h3>Blog Title</h3>
+                <p>Blog description goes here. This is a sample description for the blog post.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="{% static 'images/blog-3.jpg' %}" alt="">
+            </div>
+            <div class="content">
+                <h3>Blog Title</h3>
+                <p>Blog description goes here. This is a sample description for the blog post.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

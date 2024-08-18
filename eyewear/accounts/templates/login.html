@@ -1,0 +1,40 @@
+<!-- login.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<section class="heading">
+    <h1>Login</h1>
+    <p> <a href="{% url 'index' %}">Home</a> >> Login </p>
+</section>
+
+<section class="login-form">
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <h3>user login</h3>
+        <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="email" name="email" placeholder="enter your email" required>
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-lock"></span>
+            <input type="password" name="password" placeholder="enter your password" required>
+        </div>
+        <input type="submit" value="sign in" class="btn">
+        <div class="flex">
+            <input type="checkbox" name="remember-me" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+        </div>
+        <a href="{% url 'register' %}" class="btn">create an account</a>
+        {% if errors %}
+            <div class="errors">
+                {% for field, error in errors.items %}
+                    <p>{{ field }}: {{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </form>
+</section>
+{% endblock %}
